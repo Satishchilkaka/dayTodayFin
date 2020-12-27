@@ -8,6 +8,7 @@ frontend:
     build:
       commands:
         # Build app
+        - yarn install
         - yarn start
   artifacts:
     baseDirectory: /app
