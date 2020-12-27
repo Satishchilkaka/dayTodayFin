@@ -1,4 +1,10 @@
 version: 0.1
+backend:
+  phases:
+    build:
+      commands:
+        - "# Execute Amplify CLI with the helper script"
+        - amplifyPush --simple
 frontend:
   phases:
     prebuild: 
@@ -8,7 +14,6 @@ frontend:
     build:
       commands:
         # Build app
-        - yarn install
         - yarn start
   artifacts:
     baseDirectory: /app
