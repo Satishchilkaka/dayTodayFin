@@ -35,7 +35,7 @@ test:
         - "npm start & npx wait-on http://localhost:1234/"
     test:
       commands:
-        - yarn cypress run --spec cypress/integration/nav.spec.js --env userName=$userName,pin=$pin
+        - yarn cypress run --spec cypress/integration/nav.spec.js --env userName=$userName,pin=$pin,rUser=$rUser,amount=$amount
     postTest:
       commands:
         - echo done
