@@ -20,7 +20,7 @@ test:
   artifacts:
     baseDirectory: cypress
     configFilePath: "**/mochawesome.json"
-    # store test videos/screenshots
+    # store test videos & screenshots
     files:
       - "**/*.png"
       - "**/*.mp4"
