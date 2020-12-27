@@ -4,7 +4,7 @@
 
  ## AWSamplify
 
- 1. Clone repo https://github.com/Satishchilkaka/dayTodayFin.git
+ 1. Clone repo https://github.com/Satishchilkaka/dayTodayFin.git <br>
     1.1 Install dependencies[package.json](package.json)
  2. To use the aws amplify use [amplify.yml](amplify.yml)
  3. Set environment variables in aws amplify console
