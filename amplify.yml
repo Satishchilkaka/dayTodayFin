@@ -1,0 +1,41 @@
+version: 0.1
+backend:
+  phases:
+    build:
+      commands:
+        - "# Execute Amplify CLI with the helper script"
+        - amplifyPush --simple
+frontend:
+  phases:
+    prebuild: 
+      commands:
+        - yarn start
+    build:
+      commands:
+        - yarn install
+  artifacts:
+    baseDirectory: /app
+    files:
+      - "**/*"
+  cache:
+    paths:
+      - node_modules/**/*
+test:
+  artifacts:
+    baseDirectory: cypress
+    configFilePath: "**/mochawesome.json"
+    files:
+      - "**/*.png"
+      - "**/*.mp4"
+  phases:
+    preTest:
+      commands:
+        - yarn install
+        - yarn add wait-on
+        - "npm start & npx wait-on http://localhost:1234/"
+    test:
+      commands:
+        - yarn test
+    postTest:
+      commands:
+        - echo done
