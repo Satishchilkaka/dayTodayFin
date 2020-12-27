@@ -9,11 +9,9 @@ frontend:
   phases:
     prebuild: 
       commands:
-        # install dependencies
         - yarn start
     build:
       commands:
-        # Build app
         - yarn install
   artifacts:
     baseDirectory: /app
