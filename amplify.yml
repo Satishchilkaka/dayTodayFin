@@ -9,10 +9,12 @@ frontend:
   phases:
     prebuild: 
       commands:
-        - yarn start
+        # install dependencies
+        - yarn install
     build:
       commands:
-        - yarn install
+        # Build app
+        - yarn start
   artifacts:
     baseDirectory: /app
     files:
@@ -24,6 +26,7 @@ test:
   artifacts:
     baseDirectory: cypress
     configFilePath: "**/mochawesome.json"
+    # store test videos/screenshots
     files:
       - "**/*.png"
       - "**/*.mp4"
