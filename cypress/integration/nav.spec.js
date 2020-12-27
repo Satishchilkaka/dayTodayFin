@@ -14,8 +14,8 @@ describe('Navigate to basic bank',() => {
     it('send money to other user', () => {
         login.loginUser(userName, pin)
         cy.get('.form--transfer').within(() => {
-            cy.get('input:first').type(rUser, { delay: 0, force: true });
-            cy.get('input:last').type(amount, { delay: 0, force: true, log: false });
+            cy.get('input:first').type(rUser);
+            cy.get('input:last').type(amount);
             cy.get('.form__btn--transfer').click()
         })
 
