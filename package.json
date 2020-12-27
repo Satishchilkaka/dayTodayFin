@@ -1,10 +1,16 @@
 {
-  "name": "dayTodayFin",
+  "name": "basic-bank-operation",
   "version": "1.0.0",
+  "description": "basic bank operation",
   "main": "index.js",
   "author": "Satish <satishchilkaka8@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "cypress": "^6.2.0",
     "parcel-bundler": "^1.12.4"
+  },
+  "scripts": {
+    "start": "parcel app/index.html",
+    "test": "yarn cypress run --spec 'cypress/integration/nav.spec.js'"
   }
 }
